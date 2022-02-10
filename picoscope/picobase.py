@@ -894,6 +894,8 @@ class _PicoscopeBase(object):
         """
         self.setChannel("A",  enabled=True, **chanAParams) if chanAParams else self.setChannel("A", enabled=False)
         self.setChannel("B",  enabled=True, **chanBParams) if chanBParams else self.setChannel("B", enabled=False)
+        self.setChannel("C", enabled=False)
+        self.setChannel("D", enabled=False)
 
         if resolution:
             self.setResolution(str(resolution));
